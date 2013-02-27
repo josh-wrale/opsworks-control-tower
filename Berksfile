@@ -1,5 +1,3 @@
-require 'debugger'
-
 def opsworks_cookbook(name, branch = nil)
   cookbook name, github: 'ace-cookbooks/opsworks-cookbooks', branch: 'patches', rel: name
 end
@@ -16,3 +14,4 @@ end
 forked_cookbook 'ruby'
 forked_cookbook 'opsworks_rubygems', 'opsworks-rubygems'
 forked_cookbook 'opsworks_bundler', 'opsworks-bundler'
+forked_cookbook 'opsworks_nodejs', 'opsworks-nodejs'
