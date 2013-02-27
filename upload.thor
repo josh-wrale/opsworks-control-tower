@@ -15,12 +15,14 @@ class Upload < Thor
 
     directory.files.each { |file| file.destroy }
 
-    tgz = Zlib::GzipWriter.new(File.open('cookbooks.tgz', 'wb'))
+    FileUtils.mkdir('tmp')
+    cookbook_tarball_name = File.join('tmp', 'cookbooks.tgz')
+    tgz = Zlib::GzipWriter.new(File.open(cookbook_tarball_name, 'wb'))
     Minitar.pack('cookbooks', tgz)
 
     directory.files.create(
       key: "#{environment}/cookbooks.tgz",
-      body: File.open('cookbooks.tgz')
+      body: File.open(cookbook_tarball_name)
     )
   end
 
