@@ -1,41 +1,27 @@
 require 'thor'
 require 'fog'
+require 'zlib'
+require 'archive/tar/minitar'
 
 class Upload < Thor
+  include Archive::Tar
+
   desc 'cookbooks ACCESS_KEY SECRET_ACCESS_KEY', 'Upload cookbooks to S3'
+  option :environment
   def cookbooks(access_key, secret_access_key)
     save_credentials(access_key, secret_access_key)
 
+    environment = options.fetch(:environment, 'production')
+
     directory.files.each { |file| file.destroy }
 
-    Dir[File.join('cookbooks', '**', '**')].each do |file|
-      next if File.directory?(file)
-      puts file
+    tgz = Zlib::GzipWriter.new(File.open('cookbooks.tgz', 'wb'))
+    Minitar.pack('cookbooks', tgz)
 
-      remote_file = directory.files.create(
-        key: file.gsub(%r|^cookbooks/|, ''),
-        body: File.open(file)
-      )
-    end
-  end
-
-  desc 'cookbook NAME ACCESS_KEY SECRET_ACCESS_KEY', 'Upload a single cookbook to S3'
-  def cookbook(name, access_key, secret_access_key)
-    save_credentials(access_key, secret_access_key)
-
-    directory.files.all(prefix: "#{name}/").each do |file|
-      file.destroy
-    end
-
-    Dir[File.join('cookbooks', name, '**', '**')].each do |file|
-      next if File.directory?(file)
-      puts file
-
-      remote_file = directory.files.create(
-        key: file.gsub(%r|^cookbooks/|, ''),
-        body: File.open(file)
-      )
-    end
+    directory.files.create(
+      key: "#{environment}/cookbooks.tgz",
+      body: File.open('cookbooks.tgz')
+    )
   end
 
   no_tasks do
