@@ -16,3 +16,5 @@ forked_cookbook 'opsworks_rubygems', 'opsworks-rubygems'
 forked_cookbook 'opsworks_bundler', 'opsworks-bundler'
 forked_cookbook 'opsworks_nodejs', 'opsworks-nodejs'
 forked_cookbook 'opsworks_commons', 'opsworks-commons'
+
+cookbook 'sphinx-cookbook', github: 'ace-cookbooks/sphinx-cookbook'
