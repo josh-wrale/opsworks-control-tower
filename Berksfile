@@ -17,4 +17,4 @@ forked_cookbook 'opsworks_bundler', 'opsworks-bundler'
 forked_cookbook 'opsworks_nodejs', 'opsworks-nodejs'
 forked_cookbook 'opsworks_commons', 'opsworks-commons'
 
-cookbook 'sphinx', github: 'ace-cookbooks/sphinx-cookbook', branch: 'fix-metadata'
+cookbook 'opsworks_app_environment', github: 'ace-cookbooks/opsworks_app_environment', branch: 'master'
