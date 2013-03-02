@@ -3,15 +3,28 @@ require 'fog'
 require 'zlib'
 require 'archive/tar/minitar'
 
-class Upload < Thor
+class Cookbooks < Thor
   include Archive::Tar
 
-  desc 'cookbooks ACCESS_KEY SECRET_ACCESS_KEY', 'Upload cookbooks to S3'
-  option :environment
-  def cookbooks(access_key, secret_access_key)
+  desc 'install', 'Install cookbooks from Berksfile'
+  def install
+    puts `./bin/berks install --path cookbooks`
+  end
+
+  desc 'upload ACCESS_KEY SECRET_ACCESS_KEY', 'Upload cookbooks to S3'
+  option :environment, default: 'production'
+  option :install, type: :boolean, default: false
+  def upload(access_key, secret_access_key)
     save_credentials(access_key, secret_access_key)
 
-    environment = options.fetch(:environment, 'production')
+    environment = options[:environment]
+
+    if options[:install]
+      install
+      puts
+    end
+
+    puts "Uploading to S3"
 
     directory.files.each { |file| file.destroy }
 
@@ -46,5 +59,3 @@ class Upload < Thor
     end
   end
 end
-
-Upload.start
