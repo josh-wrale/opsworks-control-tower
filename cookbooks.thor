@@ -12,7 +12,7 @@ class Cookbooks < Thor
   end
 
   desc 'upload ACCESS_KEY SECRET_ACCESS_KEY', 'Upload cookbooks to S3'
-  option :environment, default: 'production'
+  option :environment, required: true
   option :install, type: :boolean, default: false
   def upload(access_key, secret_access_key)
     save_credentials(access_key, secret_access_key)
