@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem 'berkshelf', path: '~/dev/berkshelf'
+gem 'berkshelf'
 gem 'fog'
 gem 'thor'
 gem 'minitar'
