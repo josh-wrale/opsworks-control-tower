@@ -16,5 +16,8 @@ forked_cookbook 'opsworks_rubygems', 'opsworks-rubygems'
 forked_cookbook 'opsworks_bundler', 'opsworks-bundler'
 forked_cookbook 'opsworks_nodejs', 'opsworks-nodejs'
 forked_cookbook 'opsworks_commons', 'opsworks-commons'
+forked_cookbook 'unicorn'
+forked_cookbook 'haproxy'
 
 cookbook 'opsworks_app_environment', github: 'ace-cookbooks/opsworks_app_environment', branch: 'master'
+cookbook 'opsworks_remote_logging', github: 'ace-cookbooks/opsworks_remote_logging', branch: 'master'
