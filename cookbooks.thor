@@ -5,10 +5,11 @@ require 'archive/tar/minitar'
 
 class Cookbooks < Thor
   include Archive::Tar
+  include Thor::Actions
 
   desc 'install', 'Install cookbooks from Berksfile'
   def install
-    puts `./bin/berks install --path cookbooks`
+    run 'bundle exec berks install --path cookbooks'
   end
 
   desc 'upload ACCESS_KEY SECRET_ACCESS_KEY', 'Upload cookbooks to S3'
@@ -20,18 +21,22 @@ class Cookbooks < Thor
     environment = options[:environment]
 
     if options[:install]
-      install
+      if !install
+        raise Thor::Error, "Cookbook installation failed; aborting upload."
+      end
+
       puts
     end
 
     puts "Uploading to S3"
 
-    directory.files.each { |file| file.destroy }
-
     FileUtils.mkdir_p('tmp')
     cookbook_tarball_name = File.join('tmp', 'cookbooks.tgz')
     tgz = Zlib::GzipWriter.new(File.open(cookbook_tarball_name, 'wb'))
     Minitar.pack('cookbooks', tgz)
+
+    remote_file = directory.files.head(cookbook_tarball_name)
+    remote_file.destroy if remote_file
 
     directory.files.create(
       key: "#{environment}/cookbooks.tgz",
