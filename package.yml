@@ -1,0 +1,7 @@
+---
+- build-essential
+- scm_helper
+- haproxy
+- unicorn
+- opsworks_remote_logging
+- ops_preflight

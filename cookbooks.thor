@@ -33,7 +33,11 @@ class Cookbooks < Thor
     FileUtils.mkdir_p('tmp')
     cookbook_tarball_name = File.join('tmp', 'cookbooks.tgz')
     tgz = Zlib::GzipWriter.new(File.open(cookbook_tarball_name, 'wb'))
-    Minitar.pack('cookbooks', tgz)
+
+    package = YAML::load(ERB.new(File.read('package.yml')).result).freeze
+    package = package.collect{|c| "cookbooks/#{c}"}
+
+    Minitar.pack(package, tgz)
 
     remote_file = directory.files.head(cookbook_tarball_name)
     remote_file.destroy if remote_file
