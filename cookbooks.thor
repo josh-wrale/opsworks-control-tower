@@ -35,6 +35,7 @@ class Cookbooks < Thor
     tgz = Zlib::GzipWriter.new(File.open(cookbook_tarball_name, 'wb'))
 
     package = YAML::load(ERB.new(File.read('package.yml')).result).freeze
+    package.each {|c| puts "Packaging #{c}" }
     package = package.collect{|c| "cookbooks/#{c}"}
 
     Minitar.pack(package, tgz)
@@ -64,7 +65,7 @@ class Cookbooks < Thor
     end
 
     def directory
-      directory = connection.directories.get('ace-opsworks-cookbooks')
+      connection.directories.get('ace-opsworks-cookbooks')
     end
   end
 end
