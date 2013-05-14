@@ -6,3 +6,5 @@
 - opsworks_remote_logging
 - ops_preflight
 - opsworks_fixes
+- rbenv
+- ruby_build
