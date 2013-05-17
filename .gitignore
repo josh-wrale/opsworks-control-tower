@@ -13,6 +13,8 @@ test/version_tmp
 tmp
 bin
 .rvmrc
+.ruby-version
+.ruby-gemset
 cookbooks
 
 # YARD artifacts
