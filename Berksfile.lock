@@ -1,14 +1,152 @@
-cookbook 'rails', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'patches'
-cookbook 'deploy', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'patches'
-cookbook 'nginx', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'patches'
-cookbook 'apache2', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'patches'
-cookbook 'scm_helper', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'patches'
-cookbook 'dependencies', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'patches'
-cookbook 'mod_php5_apache2', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'patches'
-cookbook 'packages', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'patches'
-cookbook 'gem_support', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'patches'
-cookbook 'ruby_enterprise', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'patches'
-cookbook 'build-essential', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'patches'
-cookbook 'ruby', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'ruby'
-cookbook 'opsworks_rubygems', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'opsworks-rubygems'
-cookbook 'opsworks_bundler', :git => 'git://github.com/ace-cookbooks/opsworks-cookbooks.git', :ref => 'opsworks-bundler'
+{
+  "sources": {
+    "rails": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "rails"
+    },
+    "deploy": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "deploy"
+    },
+    "apache2": {
+      "locked_version": "0.9.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "apache2"
+    },
+    "scm_helper": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "scm_helper"
+    },
+    "dependencies": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "dependencies"
+    },
+    "mod_php5_apache2": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "mod_php5_apache2"
+    },
+    "packages": {
+      "locked_version": "0.7.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "packages"
+    },
+    "gem_support": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "gem_support"
+    },
+    "ruby_enterprise": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "ruby_enterprise"
+    },
+    "build-essential": {
+      "locked_version": "1.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "build-essential"
+    },
+    "mysql": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "mysql"
+    },
+    "ruby": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "ruby"
+    },
+    "opsworks_rubygems": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "opsworks_rubygems"
+    },
+    "opsworks_bundler": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "opsworks_bundler"
+    },
+    "opsworks_nodejs": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "opsworks_nodejs"
+    },
+    "opsworks_commons": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "d6f4d8d23288391de6008a6c403898c63df0e331",
+      "rel": "opsworks_commons"
+    },
+    "unicorn": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "6b21ce44f4916acc582502ab10014a7bedc41bb7",
+      "rel": "unicorn"
+    },
+    "nginx": {
+      "locked_version": "0.8.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "6b21ce44f4916acc582502ab10014a7bedc41bb7",
+      "rel": "nginx"
+    },
+    "haproxy": {
+      "locked_version": "0.7.0",
+      "git": "git://github.com/ace-cookbooks/opsworks-cookbooks.git",
+      "ref": "6267270907e035279ca70974a1bcd853f07f85a9",
+      "rel": "haproxy"
+    },
+    "opsworks_remote_logging": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks_remote_logging.git",
+      "ref": "49f0e16957c392f58142163075fb55de9f41247f"
+    },
+    "ops_preflight": {
+      "locked_version": "0.9.0",
+      "git": "git://github.com/ace-cookbooks/ops_preflight.git",
+      "ref": "e0da0c10b8bdf8d9d0358a8724b4aec25d9be279"
+    },
+    "opsworks_fixes": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks_fixes.git",
+      "ref": "b5d471e58ff4c2c55ba7af8bfbad5f316a9b5413"
+    },
+    "rbenv": {
+      "locked_version": "0.7.2",
+      "git": "git://github.com/fnichol/chef-rbenv.git",
+      "ref": "f2b53292e810dd2b43f6121f9958f5f29979dcb1"
+    },
+    "ruby_build": {
+      "locked_version": "0.7.2",
+      "git": "git://github.com/ace-cookbooks/chef-ruby_build.git",
+      "ref": "e077f318fb46a5b3be266069662a0c6e382031a4"
+    },
+    "java": {
+      "locked_version": "1.11.4"
+    },
+    "windows": {
+      "locked_version": "1.8.10"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    }
+  }
+}
