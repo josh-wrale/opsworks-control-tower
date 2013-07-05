@@ -139,6 +139,21 @@
       "git": "git://github.com/ace-cookbooks/chef-ruby_build.git",
       "ref": "e077f318fb46a5b3be266069662a0c6e382031a4"
     },
+    "opsworks_bare_rails": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks_bare_rails.git",
+      "ref": "431e66663f519a1e49f3358fd5768e0ce8c56006"
+    },
+    "god": {
+      "locked_version": "1.0.3",
+      "git": "git://github.com/ace-cookbooks/god.git",
+      "ref": "574b639dfe1634fda0222ae923fb31dae69e3fce"
+    },
+    "opsworks_sidekiq": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/ace-cookbooks/opsworks_sidekiq.git",
+      "ref": "9426fbc9447d2eb297ba592f8ba5eb03556b24ee"
+    },
     "java": {
       "locked_version": "1.11.4"
     },
@@ -147,6 +162,12 @@
     },
     "chef_handler": {
       "locked_version": "1.1.4"
+    },
+    "runit": {
+      "locked_version": "1.1.6"
+    },
+    "yum": {
+      "locked_version": "2.3.0"
     }
   }
 }

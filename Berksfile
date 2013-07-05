@@ -21,3 +21,6 @@ cookbook 'ops_preflight', github: 'ace-cookbooks/ops_preflight', branch: 'master
 cookbook 'opsworks_fixes', github: 'ace-cookbooks/opsworks_fixes', branch: 'master'
 cookbook 'rbenv', github: 'fnichol/chef-rbenv', branch: 'v0.7.2'
 cookbook 'ruby_build', github: 'ace-cookbooks/chef-ruby_build', branch: 'chef-0.9-compat'
+cookbook 'opsworks_bare_rails', github: 'ace-cookbooks/opsworks_bare_rails', branch: 'master'
+cookbook 'god', github: 'ace-cookbooks/god', branch: 'ace'
+cookbook 'opsworks_sidekiq', github: 'ace-cookbooks/opsworks_sidekiq', branch: 'master'

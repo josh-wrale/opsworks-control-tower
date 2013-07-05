@@ -8,3 +8,6 @@
 - opsworks_fixes
 - rbenv
 - ruby_build
+- opsworks_bare_rails
+- god
+- opsworks_sidekiq
