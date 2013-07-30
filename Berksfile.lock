@@ -142,7 +142,7 @@
     "opsworks_bare_rails": {
       "locked_version": "0.1.0",
       "git": "git://github.com/ace-cookbooks/opsworks_bare_rails.git",
-      "ref": "431e66663f519a1e49f3358fd5768e0ce8c56006"
+      "ref": "6073d998edbeec2a57eca62c636c09d0bee1b3f7"
     },
     "god": {
       "locked_version": "1.0.3",
@@ -152,7 +152,7 @@
     "opsworks_sidekiq": {
       "locked_version": "0.1.0",
       "git": "git://github.com/ace-cookbooks/opsworks_sidekiq.git",
-      "ref": "9426fbc9447d2eb297ba592f8ba5eb03556b24ee"
+      "ref": "e3eb72e78209a7660c7ab15d73098520310ef343"
     },
     "java": {
       "locked_version": "1.11.4"
