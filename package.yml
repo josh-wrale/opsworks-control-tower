@@ -1,13 +1,11 @@
 ---
+- elasticsearch
 - build-essential
-- scm_helper
-- haproxy
-- unicorn
-- opsworks_remote_logging
-- ops_preflight
+- xml
+- java
+- chef_handler
+- monit
+- ark
+- yum
 - opsworks_fixes
-- rbenv
-- ruby_build
-- opsworks_bare_rails
-- god
-- opsworks_sidekiq
+- windows
