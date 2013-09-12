@@ -152,10 +152,10 @@
     "opsworks_sidekiq": {
       "locked_version": "0.1.0",
       "git": "git://github.com/ace-cookbooks/opsworks_sidekiq.git",
-      "ref": "e3eb72e78209a7660c7ab15d73098520310ef343"
+      "ref": "70d7d02caac2a5b7982e201e92fd09bb19160796"
     },
     "java": {
-      "locked_version": "1.11.4"
+      "locked_version": "1.13.0"
     },
     "windows": {
       "locked_version": "1.8.10"
